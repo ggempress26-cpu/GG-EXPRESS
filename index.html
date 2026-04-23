@@ -3,79 +3,131 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<title>GG EXPRESS LDA | Serviços Profissionais</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GG EXPRESS LDA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white;
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#0a0a0a;
+  color:white;
 }
 
-header {
-  background: black;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #d4af37;
+/* MENU */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:black;
+  border-bottom:1px solid #d4af37;
 }
 
-header h1 {
-  color: #d4af37;
+nav a {
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
 }
 
-.section {
-  padding: 50px 20px;
-  text-align: center;
+nav a:hover {
+  color:#d4af37;
 }
 
-.btn {
-  padding: 15px 25px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
 }
 
-.btn-main {
-  background: #d4af37;
-  color: black;
-  font-weight: bold;
+/* HERO */
+.hero {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  padding:40px;
 }
 
-.services, .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.hero-text {
+  flex:1;
+}
+
+.hero h1 {
+  font-size:40px;
+  color:#d4af37;
+}
+
+.hero img {
+  width:400px;
+  border-radius:10px;
+}
+
+/* SERVICES */
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .card {
-  background: #111;
-  margin: 10px;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  border: 1px solid #222;
+  background:#111;
+  border:1px solid #222;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  width:220px;
+  text-align:center;
 }
 
 .card:hover {
-  border: 1px solid #d4af37;
+  border:1px solid #d4af37;
 }
 
-.gallery img {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  margin: 10px;
-  border-radius: 10px;
+/* SECTION */
+.section {
+  padding:50px 20px;
+  text-align:center;
 }
 
+.highlight {
+  color:#d4af37;
+}
+
+/* GRID */
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.grid img {
+  width:250px;
+  margin:10px;
+  border-radius:10px;
+}
+
+/* CTA */
+.cta {
+  background:#d4af37;
+  color:black;
+  padding:40px;
+}
+
+/* FOOTER */
 footer {
-  background: black;
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #d4af37;
+  background:black;
+  padding:20px;
+  text-align:center;
+  border-top:1px solid #d4af37;
 }
 </style>
 
@@ -83,61 +135,100 @@ footer {
 
 <body>
 
-<header>
-<h1>GG EXPRESS LDA</h1>
-<p>Eletricidade • Instalações • Reparações</p>
-</header>
+<!-- MENU -->
 
-<section class="section">
-<h2>Serviços rápidos e profissionais em Lisboa</h2>
-<p>Atendimento ao domicílio com qualidade e confiança</p>
+<nav>
+<div><b>GG EXPRESS</b></div>
+<div>
+<a href="#">Início</a>
+<a href="#">Serviços</a>
+<a href="#">Trabalhos</a>
+<a href="#">Regiões</a>
+<a href="#">Contacto</a>
+</div>
+</nav>
 
-<button class="btn btn-main" onclick="window.location.href='https://wa.me/351913889987'">
-Agendar no WhatsApp
-</button>
+<!-- HERO -->
+
+<section class="hero">
+<div class="hero-text">
+<h1>Eletricista Certificado</h1>
+<p>Instalação e reparação de estores, eletricidade e wallbox</p>
+
+<p>📞 913 889 987</p>
+</div>
+
+<img src="wallbox.jpg">
 </section>
 
+<!-- SERVIÇOS -->
+
 <section class="section">
-<h2>Os nossos serviços</h2>
+<h2 class="highlight">Nossos Serviços</h2>
 
 <div class="services">
 <div class="card">⚡ Instalações elétricas</div>
 <div class="card">🔧 Reparações</div>
-<div class="card">🪟 Estores e persianas</div>
-<div class="card">🚽 Autoclismos</div>
+<div class="card">🪟 Estores</div>
+<div class="card">⚙️ Automação</div>
+<div class="card">🔌 Wallbox</div>
 <div class="card">🔥 Placas de fogão</div>
-<div class="card">🏠 Instalação de janelas</div>
 </div>
 </section>
 
-<!-- GALERIA DE TRABALHOS -->
+<!-- FOGÃO -->
 
 <section class="section">
-<h2>Trabalhos realizados</h2>
+<h2 class="highlight">Instalação de Placas de Fogão</h2>
 
-<div class="gallery">
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-</div>
-
-</section>
-
-<section class="section">
-<h2>Porquê escolher a GG EXPRESS?</h2>
 <p>
-✔ Atendimento rápido<br>
-✔ Profissionalismo<br>
-✔ Técnicos qualificados<br>
-✔ Preços justos<br>
-✔ Serviço em Lisboa e arredores
+✔ Ligação segura<br>
+✔ Instalação profissional<br>
+✔ Compatível com todas marcas<br>
+✔ Segurança total
+</p>
+
+</section>
+
+<!-- REGIÕES -->
+
+<section class="section">
+<h2 class="highlight">Regiões que atendemos</h2>
+
+<p>
+Lisboa • Odivelas • Loures • Amadora • Sintra • Cascais • Almada • Seixal
 </p>
 </section>
 
+<!-- TRABALHOS -->
+
+<section class="section">
+<h2 class="highlight">Trabalhos realizados</h2>
+
+<div class="grid">
+<img src="casa1.jpg">
+<img src="casa2.jpg">
+<img src="casa3.jpg">
+</div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+<h2>Precisa de um técnico?</h2>
+<p>Fale connosco agora no WhatsApp</p>
+</section>
+
+<!-- FOOTER -->
+
 <footer>
 <p>📞 913 889 987</p>
-<p>© 2026 GG EXPRESS LDA</p>
+<p>© GG EXPRESS LDA</p>
 </footer>
+
+<!-- BOTÃO WHATSAPP -->
+
+<a href="https://wa.me/351913889987" class="whatsapp-float">💬</a>
 
 </body>
 </html>
