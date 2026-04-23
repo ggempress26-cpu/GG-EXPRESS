@@ -9,125 +9,155 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin:0;
-  font-family:'Montserrat',sans-serif;
-  background:#0a0a0a;
-  color:white;
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#0a0a0a;
+color:white;
 }
 
-/* MENU */
-nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
-  background:black;
-  border-bottom:1px solid #d4af37;
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:black;
+border-bottom:1px solid #d4af37;
 }
 
-nav a {
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
+nav .menu a{
+margin:0 15px;
+color:#ccc;
+text-decoration:none;
 }
 
-nav a:hover {
-  color:#d4af37;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
+nav .menu a:hover{
+color:#d4af37;
 }
 
 /* HERO */
-.hero {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  padding:40px;
+.hero{
+display:flex;
+flex-wrap:wrap;
+padding:60px 40px;
+align-items:center;
 }
 
-.hero-text {
-  flex:1;
+.hero-text{
+flex:1;
 }
 
-.hero h1 {
-  font-size:40px;
-  color:#d4af37;
+.hero-text h1{
+font-size:50px;
+color:#d4af37;
 }
 
-.hero img {
-  width:400px;
-  border-radius:10px;
+.hero-img{
+flex:1;
+text-align:center;
 }
 
-/* SERVICES */
-.services {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+.hero-img img{
+width:90%;
+border-radius:12px;
 }
 
-.card {
-  background:#111;
-  border:1px solid #222;
-  padding:20px;
-  margin:10px;
-  border-radius:10px;
-  width:220px;
-  text-align:center;
+/* SERVIÇOS */
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:20px;
 }
 
-.card:hover {
-  border:1px solid #d4af37;
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:12px;
+margin:10px;
+width:200px;
+padding:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+border:1px solid #d4af37;
+transform:translateY(-5px);
 }
 
 /* SECTION */
-.section {
-  padding:50px 20px;
-  text-align:center;
+.section{
+padding:50px 20px;
+text-align:center;
 }
 
-.highlight {
-  color:#d4af37;
+.highlight{
+color:#d4af37;
+}
+
+/* FOGAO */
+.fogao{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+}
+
+.fogao img{
+width:300px;
+border-radius:10px;
+margin:10px;
 }
 
 /* GRID */
-.grid {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.grid img {
-  width:250px;
-  margin:10px;
-  border-radius:10px;
+.grid img{
+width:250px;
+margin:10px;
+border-radius:10px;
+}
+
+/* CATALOGO */
+.catalogo{
+background:#111;
+padding:30px;
+border-radius:10px;
+margin:20px;
 }
 
 /* CTA */
-.cta {
-  background:#d4af37;
-  color:black;
-  padding:40px;
+.cta{
+background:#d4af37;
+color:black;
+padding:40px;
+text-align:center;
 }
 
 /* FOOTER */
-footer {
-  background:black;
-  padding:20px;
-  text-align:center;
-  border-top:1px solid #d4af37;
+footer{
+background:black;
+padding:30px;
+text-align:center;
+border-top:1px solid #d4af37;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+color:white;
 }
 </style>
 
@@ -135,16 +165,16 @@ footer {
 
 <body>
 
-<!-- MENU -->
-
 <nav>
 <div><b>GG EXPRESS</b></div>
-<div>
-<a href="#">Início</a>
-<a href="#">Serviços</a>
-<a href="#">Trabalhos</a>
-<a href="#">Regiões</a>
-<a href="#">Contacto</a>
+
+<div class="menu">
+<a>Início</a>
+<a>Serviços</a>
+<a>Trabalhos</a>
+<a>Regiões</a>
+<a>Catálogo</a>
+<a>Contacto</a>
 </div>
 </nav>
 
@@ -152,13 +182,15 @@ footer {
 
 <section class="hero">
 <div class="hero-text">
-<h1>Eletricista Certificado</h1>
-<p>Instalação e reparação de estores, eletricidade e wallbox</p>
-
+<h1>GG EXPRESS</h1>
+<p>Eletricista Certificado</p>
+<p>Instalação e reparação profissional</p>
 <p>📞 913 889 987</p>
 </div>
 
+<div class="hero-img">
 <img src="wallbox.jpg">
+</div>
 </section>
 
 <!-- SERVIÇOS -->
@@ -167,37 +199,44 @@ footer {
 <h2 class="highlight">Nossos Serviços</h2>
 
 <div class="services">
-<div class="card">⚡ Instalações elétricas</div>
-<div class="card">🔧 Reparações</div>
-<div class="card">🪟 Estores</div>
-<div class="card">⚙️ Automação</div>
-<div class="card">🔌 Wallbox</div>
-<div class="card">🔥 Placas de fogão</div>
+<div class="card">Estores</div>
+<div class="card">Reparação</div>
+<div class="card">Manutenção</div>
+<div class="card">Eletricidade</div>
+<div class="card">Automação</div>
+<div class="card">Wallbox</div>
+<div class="card">Placas de fogão</div>
 </div>
 </section>
 
 <!-- FOGÃO -->
 
 <section class="section">
-<h2 class="highlight">Instalação de Placas de Fogão</h2>
+<h2 class="highlight">Instalação de placas de fogão</h2>
 
-<p>
-✔ Ligação segura<br>
-✔ Instalação profissional<br>
-✔ Compatível com todas marcas<br>
-✔ Segurança total
-</p>
+<div class="fogao">
+<img src="fogao.jpg">
+</div>
 
+<p>✔ Instalação segura<br>
+✔ Profissional<br>
+✔ Todas as marcas</p>
+</section>
+
+<!-- CATALOGO -->
+
+<section class="section">
+<div class="catalogo">
+<h2 class="highlight">Catálogo de serviços</h2>
+<p>Veja todos os nossos serviços disponíveis</p>
+</div>
 </section>
 
 <!-- REGIÕES -->
 
 <section class="section">
-<h2 class="highlight">Regiões que atendemos</h2>
-
-<p>
-Lisboa • Odivelas • Loures • Amadora • Sintra • Cascais • Almada • Seixal
-</p>
+<h2 class="highlight">Regiões</h2>
+<p>Lisboa • Odivelas • Loures • Amadora • Sintra • Cascais • Almada • Seixal</p>
 </section>
 
 <!-- TRABALHOS -->
@@ -215,20 +254,16 @@ Lisboa • Odivelas • Loures • Amadora • Sintra • Cascais • Almada •
 <!-- CTA -->
 
 <section class="cta">
-<h2>Precisa de um técnico?</h2>
-<p>Fale connosco agora no WhatsApp</p>
+<h2>Contacte-nos agora</h2>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
+<p>GG EXPRESS LDA</p>
 <p>📞 913 889 987</p>
-<p>© GG EXPRESS LDA</p>
 </footer>
 
-<!-- BOTÃO WHATSAPP -->
-
-<a href="https://wa.me/351913889987" class="whatsapp-float">💬</a>
+<a href="https://wa.me/351913889987" class="whatsapp">💬</a>
 
 </body>
 </html>
+
